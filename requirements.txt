@@ -1,0 +1,6 @@
+numpy
+tensorflow
+uvicorn
+fastapi
+paddleocr
+keras
