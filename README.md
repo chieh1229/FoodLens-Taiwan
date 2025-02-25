@@ -19,7 +19,25 @@ FoodLens Taiwan 是一款基於 AI 的美食導遊 App，幫助來台旅客解�
 5. 翻譯 API：Google Cloud Translation API
 
 ## 📸 使用示例
-![首頁](images/home.jpg)
+## 📸 使用示例 (Usage Examples)
+
+| **首頁** | **搜尋功能** | **食物辨識** |
+|---------|------------|--------------|
+| ![首頁](images/home.jpg) | ![搜尋](images/search.jpg) | ![食物辨識](images/food_recognize.jpg) |
+
+
+| **菜單翻譯** | **食譜** | **推薦店家** |
+|-------------|--------|--------------|
+| ![菜單翻譯](images/menu_translate.jpg) | ![食譜](images/recipe.jpg) | ![推薦店家](images/recommended_store.jpg) |
+
+
+| **收藏店家** | **收藏美食** | **美食集點卡** |
+|-------------|------------|----------------|
+| ![收藏店家](images/saved_store.jpg) | ![收藏美食](images/saved_food.jpg) | ![集點卡](images/foodie_stamps_card.jpg) |
+
+
+
+
 
 
 
