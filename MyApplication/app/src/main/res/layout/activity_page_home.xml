@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page_Home">
+
+    <LinearLayout
+        android:id="@+id/linearPageHome"
+        style="@style/Theme.MyApplication"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearColumntextrecognisef"
+            android:layout_width="match_parent"
+            android:layout_height="695dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtRecogniseFood"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{pageHomeVM.pageHomeModel.txtTextRecogniseF}"
+                android:textColor="#5C5A5A"
+                android:textSize="40sp"
+                tools:text="RecogniseFood" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchViewButtonSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#CFCFCF"
+                android:theme="@style/Widget.AppCompat.SearchView"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="search_for_food"
+                app:searchIcon="@android:drawable/ic_menu_search" />
+
+            <LinearLayout
+                android:id="@+id/linearHeadList"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:fadeScrollbars="true"
+                android:isScrollContainer="true"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:scrollbarSize="2dp"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearColumntextstaplediet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnButtonGoToPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:circular="@{true}"
+                        android:gravity="start"
+                        android:imageRes="@{@drawable/img_buttongotopage}"
+                        android:scaleType="fitCenter"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_btn_home_staplediet" />
+
+                    <TextView
+                        android:id="@+id/txtTextStapleDiet"
+                        style="@style/TextAppearance.Material3.TitleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{pageHomeVM.pageHomeModel.txtTextStapleDiet}"
+                        tools:text="主食" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearColumntextsidedish"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonGoToPageOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:circular="@{true}"
+                        android:gravity="start"
+                        android:imageRes="@{@drawable/img_buttongotopage}"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/green_500" />
+
+                    <TextView
+                        android:id="@+id/txtTextSideDish"
+                        style="@style/TextAppearance.Material3.TitleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{pageHomeVM.pageHomeModel.txtTextSideDish}"
+                        tools:text="小菜" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearColumntextsnack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonGoToPageTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:circular="@{true}"
+                        android:gravity="start"
+                        android:imageRes="@{@drawable/img_buttongotopage}"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/green_500" />
+
+                    <TextView
+                        android:id="@+id/txtTextSnack"
+                        style="@style/TextAppearance.Material3.TitleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{pageHomeVM.pageHomeModel.txtTextSnack}"
+                        tools:text="點心" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearColumntextdrinks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonGoToPageThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:circular="@{true}"
+                        android:gravity="start"
+                        android:imageRes="@{@drawable/img_buttongotopage}"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription"
+                        tools:src="@color/green_500" />
+
+                    <TextView
+                        android:id="@+id/txtTextDrinks"
+                        style="@style/TextAppearance.Material3.TitleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{pageHomeVM.pageHomeModel.txtTextDrinks}"
+                        tools:text="飲料" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFoodYouMayLike"
+                style="@style/TextAppearance.Material3.HeadlineMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:text="@{pageHomeVM.pageHomeModel.txtTextFoodYouMig}"
+                android:textSize="16sp"
+                tools:text="猜你喜歡" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerBodyList"
+                itemSpace="@{@dimen/_39pxh}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="true"
+                android:gravity="center_horizontal"
+                android:isScrollContainer="true"
+                android:orientation="vertical"
+                android:scrollbarStyle="outsideInset"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem=" " />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameBottombar"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:layout_weight="0.3"
+            android:gravity="start">
+
+            <LinearLayout
+                android:id="@+id/linearRowthumbsup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp">
+
+                <ImageButton
+                    android:id="@+id/imageThumbsup"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:tint="#9D9D9F"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_bottombar_thumbsup" />
+
+                <ImageButton
+                    android:id="@+id/imageCamera"
+                    android:layout_width="104dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    tools:ignore="ContentDescription"
+                    tools:src="@android:drawable/ic_menu_camera" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonGoPageAccount"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/material_dynamic_neutral40"
+                    tools:ignore="ContentDescription"
+                    tools:src="@android:drawable/ic_menu_myplaces" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
